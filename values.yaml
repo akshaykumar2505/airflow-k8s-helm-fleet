@@ -112,14 +112,11 @@ airflow:
         secretKeyRef:
           name: airflow
           key: wod-auth     
-  extraVolumeMounts: 
-    - name: mount
-      mountPath: /mnt
+  extraVolumeMounts: [] 
   extraVolumes: 
-    - name: mount
-      hostPath:
-        path: /mnt
-        type: Directory
+    - name: my-volume
+      persistentVolumeClaim:
+        claimName: my-existing-pvc
   kubernetesPodTemplate:
     stringOverride: ""
     resources: {}
