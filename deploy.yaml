@@ -4,5 +4,5 @@ metadata:
   name: airflow
   namespace: fleet-local
 spec:
-  repo: https://github.com/akshaykumar2505/airflow-helm-fleet
+  repo: https://github.com/akshaykumar2505/airflow-k8s-helm-fleet
   branch: main
