@@ -113,10 +113,7 @@ airflow:
           name: airflow
           key: wod-auth     
   extraVolumeMounts: [] 
-  extraVolumes: 
-    - name: my-volume
-      persistentVolumeClaim:
-        claimName: my-existing-pvc
+  extraVolumes: []    
   kubernetesPodTemplate:
     stringOverride: ""
     resources: {}
