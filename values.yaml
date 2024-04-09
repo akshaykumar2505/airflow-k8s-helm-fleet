@@ -112,8 +112,14 @@ airflow:
         secretKeyRef:
           name: airflow
           key: wod-auth     
-  extraVolumeMounts: []    
-  extraVolumes: []    
+  extraVolumeMounts: 
+    - name: mount
+      mountPath: /mnt
+  extraVolumes: 
+    - name: mount
+      hostPath:
+        path: /mnt
+        type: Directory
   kubernetesPodTemplate:
     stringOverride: ""
     resources: {}
