@@ -186,20 +186,20 @@ pgbouncer:
   resources: {}
   authType: md5
 postgresql:
-  enabled: true
+  enabled: false
   persistence:
     enabled: true
     storageClass: ""
     size: 8Gi
 externalDatabase:
   type: postgres  
-  #host: host.minikube.internal
-  #port: 5432
-  #database: airflow_postgres_db
-  #user: airflow_postgres_user  
-  #passwordSecret: "airflow"
-  #passwordSecretKey: "airflow-postgres-password"
-  #properties: ""
+  host: host.minikube.internal
+  port: 5432
+  database: airflow_postgres_db
+  user: airflow_postgres_user  
+  passwordSecret: "airflow"
+  passwordSecretKey: "airflow-postgres-password"
+  properties: ""
 redis:  
   enabled: false
 externalRedis:
