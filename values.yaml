@@ -193,7 +193,7 @@ postgresql:
     size: 8Gi
 externalDatabase:
   type: postgres  
-  host: host.minikube.internal
+  host: host.docker.internal
   port: 5432
   database: airflow_postgres_db
   user: airflow_postgres_user  
