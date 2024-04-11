@@ -159,7 +159,7 @@ flower:
 logs:  
   path: /opt/airflow/logs
   persistence:
-    enabled: false
+    enabled: true
 dags:
   path: /opt/airflow/dags
   persistence:
