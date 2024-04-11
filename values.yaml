@@ -124,7 +124,7 @@ scheduler:
   replicas: 1
   resources: {}
   logCleanup:
-    enabled: true
+    enabled: false
     retentionMinutes: 21600
   livenessProbe:
     enabled: true
