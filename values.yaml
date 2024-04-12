@@ -44,11 +44,11 @@ airflow:
           name: airflow
           key: airflow-webserver-secret-key       
     - name: KAFKA_HOST
-      value: "host.minikube.internal"
+      value: "host.docker.internal"
     - name: KAFKA_PORT
       value: "9092"
     - name: REDIS_HOST
-      value: "host.minikube.internal"
+      value: "host.docker.internal"
     - name: REDIS_PORT
       value: "6379"
     - name: REDIS_DB
@@ -59,7 +59,7 @@ airflow:
           name: airflow
           key: redis-password
     - name: POSTGRES_HOST
-      value: "host.minikube.internal"
+      value: "host.docker.internal"
     - name: POSTGRES_PORT
       value: "5432"
     - name: POSTGRES_DB
@@ -76,7 +76,7 @@ airflow:
     - name: CLICKHOUSE_DB
       value: "my_database"
     - name: CLICKHOUSE_HOST
-      value: "host.minikube.internal"
+      value: "host.docker.internal"
     - name: CLICKHOUSE_USER
       value: "username"
     - name: CLICKHOUSE_PASSWORD
@@ -203,7 +203,7 @@ externalDatabase:
 redis:  
   enabled: false
 externalRedis:
-  host: host.minikube.internal
+  host: host.docker.internal
   port: 6379
   databaseNumber: 0
   passwordSecret: "airflow"
